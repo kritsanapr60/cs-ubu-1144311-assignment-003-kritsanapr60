@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card border-0">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#tab1" data-toggle="tab">Decimal to IEEE 32 bit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tab2" data-toggle="tab">Decimal to IEEE 64 bit</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#tab3" data-toggle="tab">Solve $AX = B$</a>
+            </li>
+          </ul>
+          <div class="tab-content px-1 pt-3">
+            <div class="tab-pane active" id="tab1">
+              <h4 style="color: blue;">แปลงเลขทศนิยมเป็น เลข 32 บิต (Decimal to IEEE 32 bit)</h4>
+              <hr>
+              <form action="#" method="GET">
+              {% csrf_token %}
+              <label for="exampleFormControlFile1" class="pull-left" style="text-align:left;">ใส่ตัวเลขที่ต้องการเเปลง</label>
+              <center>
+              <div class="col-md-10 align-items-center justify-content-center">
+                <input id="name" class="form-control" name="num" type="number" placeholder="กรอกตัวเลข" step="any" min="0" max="9999999"  value="{{ x }}" required>
+                <br>
+                <div class="jumbotron">
+                    number :
+                    <br>
+                    Answe : {{ answer }}
+                </div>
+                {% comment %} <input class="form-control" type="text" placeholder="Readonly input here…" readonly> {% endcomment %}
+              </div>
+              </center>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="submit" class="btn btn-outline-primary"> แปลงค่า</button>
+              </form>
+            </div>
+            <div class="tab-pane" id="tab2">
+              <h4 style="color: blue;">แปลงเลขทศนิยมเป็น เลข 64 บิต (Decimal to IEEE 64 bit)</h4>
+               <hr>
+              <form action="">
+              <label for="exampleFormControlFile1" class="pull-left" style="text-align:left;">ใส่ตัวเลขที่ต้องการเเปลง</label>
+              <center>
+              <div class="col-md-10 align-items-center justify-content-center">
+                <input class="form-control" type="number" placeholder="กรอกตัวเลข" required>
+                <br>
+                <div class="jumbotron">
+                    Answer
+                </div>
+                {% comment %} <input class="form-control" type="text" placeholder="Readonly input here…" readonly> {% endcomment %}
+              </div>
+              </center>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-outline-primary"> แปลงค่า</button>
+              </form>
+            </div>
+             <div class="tab-pane" id="tab3">
+              <h4 style="color: blue;">แปลงเลขทศนิยมเป็น เลข 64 บิต (Decimal to IEEE 64 bit)</h4>
+              <hr>
+               <form action="">
+              <label for="exampleFormControlFile1" class="pull-left" style="text-align:left;">ใส่สมการที่ต้องการ</label>
+              <center>
+              <div class="col-md-10 align-items-center justify-content-center">
+                <input class="form-control" type="number" placeholder="สมการที่ 1" required><br>
+                <input class="form-control" type="number" placeholder="สมการที่ 2 " required><br>
+                <input class="form-control" type="number" placeholder="สมการที่ 3" required>
+                <br>
+                <div class="alert alert-primary">
+                    Answer
+                </div>
+                {% comment %} <input class="form-control" type="text" placeholder="Readonly input here…" readonly> {% endcomment %}
+              </div>
+              </center>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-outline-primary"> แปลงค่า</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+{% extends 'demopage/base.html' %}
+
+{% block content %}
+<section id="home-sec">
+    <div class="overlay text-center">
+        <h1 class="text-warning"><i class="fas fa-square-root-alt"></i> &nbsp;Computational Mathematics</h1>
+        <hr class="hr-set"/>
+    </div>
+</section>
+<section >
+  <br>
+  <br>
+    <div class="container">
+        <div class="row text-center" >
+            <div class="col-md-4">
+                <a href = '/dec_32'><h3> แปลงเลขทศนิยมเป็น <br> IEEE floating point single precision (32-bit)</h3></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href = '/dec_64'><h3>แปลงเลขทศนิยมเป็น <br>IEEE floating point double precision (64-bit)</h3></a>
+            </div>
+
+            <div class="col-md-4">
+                <a href = '/solve'><h3>แก้ระบบสมการเชิงเส้น <br> $Ax = b$</h3></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

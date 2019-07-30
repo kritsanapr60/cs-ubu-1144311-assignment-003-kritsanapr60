@@ -1,0 +1,41 @@
+{% extends 'demopage/base.html' %}
+
+{% block content %}
+
+    <section class="headline-sec">
+        <div class="overlay ">
+            <h3>แก้ระบบสมการเชิงเส้น $Ax = b$<i class="fa fa-angle-double-right "></i></h3>
+        </div>
+    </section>
+    <!--HOME SECTION END-->
+<center>
+    <section>
+        <div class="container">
+            <div class="col-md-12" >
+                <div class="alert alert-info" >
+                    <div class="form-group">
+                        <h3><strong>กรุณากรอกค่าต่อไปนี้</strong></h3>
+
+                    <form action='/solve/' method="post">
+                        {% csrf_token %}
+                        สมการเชิงเส้น
+                        <select name='equation'>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="1">6</option>
+                        </select>
+                        สมการ
+                        <label></label>
+                        <br><br>
+                        <input type="submit" class="btn btn-primary" >
+                    </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</center>
+{% endblock content %}
